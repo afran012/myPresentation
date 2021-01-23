@@ -1,0 +1,24 @@
+.right_section {
+    box-sizing: border-box;
+    float: right;
+    width: 50%;
+    height: 30em;
+    border-radius: 3px;
+    border: 5px solid $border-primary;    
+    align-items: center;
+}
+.left_section {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 30em;
+    border-radius: 3px;
+    border: 5px solid $border-primary;    
+    align-items: center;
+}
+
+.main_section {
+    display: inline;
+}
+    
+    

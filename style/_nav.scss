@@ -1,0 +1,43 @@
+ul {
+    display:flex;
+    justify-content: space-around;
+    }
+    
+li {
+    display: inline-block;
+    width: 7em;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 3px ;
+    line-height: 20px;
+    border: 2px solid $border-primary;
+}
+
+
+
+
+.navigator {
+    box-sizing: border-box;
+    width: 98%;
+    height: 5%;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    border: 2px solid $border-primary;    
+    /*align-items: center; */
+}
+
+.ul{
+    
+    align-items: center;
+    align-content: space-between;
+    display:flex;
+    justify-content: space-around;
+}
+
+.ul li{
+    display: inline;
+    align-items: center;
+    margin: 0.3em auto;
+    @extend %circle;
+}

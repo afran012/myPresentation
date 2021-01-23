@@ -1,0 +1,97 @@
+@charset "UTF-8";
+html {
+  font-size: 10px;
+  /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
+  font-family: "Open Sans", sans-serif;
+  /* Este debe ser el resto del resultado que obtuviste de Google fonts */
+  color: #000000;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: static;
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+/*
+body { 
+    width: 100%;
+    padding: 0 20px 20px 20px;
+    border: 5px solid $border-primary;
+    margin: 1em auto;
+    background-color: $bg-primary;
+
+}*/
+h1 {
+  margin: 0;
+  padding: 0.1em 0.1em;
+  color: #000000;
+  text-shadow: 0.1em 0.1em 0.1em #fae76e;
+}
+
+header {
+  background: #557174;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* position: -webkit-sticky;  
+    position: sticky;
+    top: 20px;*/
+}
+
+header img {
+  width: 30%;
+  display: block;
+  margin: 0.3em auto;
+  border: 0.2em solid #031e2e;
+  border-radius: 50%;
+}
+
+.right_section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: right;
+  width: 50%;
+  height: 30em;
+  border-radius: 3px;
+  border: 5px solid #031e2e;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left_section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 30em;
+  border-radius: 3px;
+  border: 5px solid #031e2e;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_section {
+  display: inline;
+}
+
+.aside-bar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 20%;
+  height: 30em;
+  float: left;
+  border-radius: 3px;
+  border: 5px solid #031e2e;
+}
+/*# sourceMappingURL=style.css.map */

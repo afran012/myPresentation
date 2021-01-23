@@ -1,0 +1,24 @@
+
+
+h1 {
+    margin: 0;
+    padding: 0.1em 0.1em;
+    color: $font-color1;
+    text-shadow: 0.1em 0.1em 0.1em $shadow;
+}
+    
+header {
+    background: $bg-quaternary  ;
+    justify-content: center;
+    box-sizing: border-box;
+   /* position: -webkit-sticky;  
+    position: sticky;
+    top: 20px;*/
+    img {
+        width: 30%;
+        display: block;
+        margin: 0.3em auto;
+        border: 0.2em solid $border-primary;
+        border-radius: 50%;
+    }    
+}
