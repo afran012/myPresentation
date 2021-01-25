@@ -1,25 +1,30 @@
 .right_section {
-    position: relative;
+    /*position: relative;*/
+    display: inline-block;
     width: 30%;
     height: 25em;
     border-radius: 3px;
-    border: 5px solid $border-primary;    
+    border: 5px solid $border-primary;
+    overflow: scroll;    
     /*transform: translate(104%, -129%);*/
 }
 .left_section {
-    position: relative;
+    /*position: relative;*/
+    display: inline-block;
     width: 30%;
     height: 25em;
     border-radius: 3px;
-    border: 5px solid $border-primary;    
+    border: 5px solid $border-primary;
+    overflow: scroll;    
     /*transform: translate(1%, 1%);*/
 }
 
 
 .main_section {
-    display: flex;
-    /*position: relative;
-    box-sizing: border-box;*/
+   /* display: inline-block;*/
+    /*position: relative;*/
+    box-sizing: border-box;
+    /*overflow: hidden ;*/
     
 }
 /*
