@@ -10,7 +10,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
-  margin: 0;
+  margin: 1px;
   padding: 0; 
   border: none;
   list-style: none;
@@ -19,11 +19,13 @@ html {
 }
 
 %circle{
-  width: 7em;
+  width: 10%;
+  box-sizing: border-box;
+  overflow: hidden;
   height: 4em;
-  border: 1px solid #000;
-  border-radius: 50%;
-  box-shadow: -3px 0px 0px 1px $bg-primary;
-  line-height: 40px;
+  border: 1.5px solid rgb(34, 75, 44);
+  border-radius: 30%;
+  box-shadow: -4px 1px 1px 3px $bg-primary;
+  line-height: 3em;
   text-align: center;
 }

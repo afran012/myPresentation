@@ -2,6 +2,7 @@
 
 h1 {
     margin: 0;
+    display: inline-block;
     padding: 0.1em 0.1em;
     color: $font-color1;
     text-shadow: 0.1em 0.1em 0.1em $shadow;
@@ -9,14 +10,14 @@ h1 {
     
 header {
     background: $bg-quaternary  ;
-    justify-content: center;
+    /*justify-content: center;*/
     box-sizing: border-box;
     position: -webkit-sticky;  
     position: sticky;
     top: 1%;
     img {
-        width: 10%;
-        display: block;
+        width: 20%;
+        display: inline-block;
         margin: 0.3em auto;
         border: 0.2em solid $border-primary;
         border-radius: 50%;

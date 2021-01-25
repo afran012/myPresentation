@@ -1,15 +1,15 @@
-ul {
-    display:flex;
+/*ul {
+    display:flex; 
     justify-content: space-around;
-    }
+}*/
     
 li {
     display: inline-block;
-    width: 7em;
-    border-radius: 25px;
-    padding: 10px;
-    margin: 3px ;
-    line-height: 20px;
+    width: 5em;
+    border-radius: 50%;
+    padding: 0.5em;
+    margin: 0.5em ;
+    line-height: 1em;
     border: 2px solid $border-primary;
 }
 
@@ -19,17 +19,18 @@ li {
 .navigator {
     box-sizing: border-box;
     width: 98%;
-    height: 5%;
-    margin: 1em;
-    padding: 1em;
+    height: 7em;
+    margin: 0.5em;
+    padding: 0.5em;
     border-radius: 1em;
-    border: 2px solid $border-primary;    
+    border: 2px solid $bg-primary;    
     /*align-items: center; */
 }
 
 .ul{
     
     align-items: center;
+    box-sizing: border-box;
     align-content: space-between;
     display:flex;
     justify-content: space-around;
@@ -37,6 +38,7 @@ li {
 
 .ul li{
     display: inline;
+    box-sizing: border-box;
     align-items: center;
     margin: 0.3em auto;
     @extend %circle;
