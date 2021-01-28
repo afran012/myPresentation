@@ -1,14 +1,24 @@
 
 @media screen and (max-width: 1000px){
 
-    nav .nabvar div .menu span {
+    h1 {
+        width: 70%;
+    }
+
+    div.menu span {
         display: block;
     }
 
-    nav .nabvar div .menu input { 
+    div.menu input { 
         display: block;
     }
-    
+
+    nav {
+        display: flex;
+        
+    }    
+
+
 
 
     .ul{
@@ -16,7 +26,7 @@
         flex-direction: column;
         box-sizing: border-box;
         align-content: space-between;
-        display:flex;
+        display:none;
         justify-content: space-around;
         border: 2px solid $bg-secondary;
     

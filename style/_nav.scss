@@ -36,7 +36,7 @@
 
 
 
-input {
+div.menu input {
     display: none;
     position: absolute;
     width: 40px;
@@ -46,8 +46,8 @@ input {
     border: 2px solid $bg-tertiary;
 }
 
-div .menu span {
-    display: block;
+div.menu span {
+    display: none;
     width: 25px;
     height: 2.5px;
     margin-bottom: 6.5px;
@@ -57,35 +57,26 @@ div .menu span {
     transform-origin: 0px 0px;
 }
 
-div .menu span:first-child {
+span:first-child {
     transform-origin: 0% 0%;
 }
 
-div .menu span:nth-last-child(2) {
+span:nth-last-child(2) {
     transform-origin: 0% 100%;
 }
 
-div .menu input:checked ~ span {
-    opacity: 1;
-    transform: rotate(-45deg) scale(1.35, 1) ;
+input:checked ~ span {
+    /*opacity: 1;*/
+    transform: rotate(45deg);
 }
-
-div .menu input:checked ~ span:nth-last-child(2) {
-    opacity: 0;
-    transform: rotate(0) translate();
+input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg);
 }
 
 input:checked ~ span:nth-last-child(3) {
-    transform: rotate(45deg) scale(1.35, 1) translate(1px,0px);
+    opacity: 0;
 }
-
-
-input:checked ~ span {
-    opacity: 1;
-    transform: rotate(-45deg) scale(1.35, 1) ;
-}
-
 
 input:checked ~ ul {
-    display:flex;
+    display: flex ;
 }
