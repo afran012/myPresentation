@@ -1,12 +1,25 @@
 
-@media screen and (min-width: 1000px){
+@media screen and (max-width: 1000px){
 
-    /*
-    span {
-        display: default;
+    nav .nabvar div .menu span {
+        display: block;
     }
 
-*/
+    nav .nabvar div .menu input { 
+        display: block;
+    }
+    
 
+
+    .ul{
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-content: space-between;
+        display:flex;
+        justify-content: space-around;
+        border: 2px solid $bg-secondary;
+    
+    }
 
 }

@@ -87,7 +87,7 @@ header img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 98%;
-  height: 7em;
+  height: 15px;
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 1em;
@@ -107,24 +107,20 @@ header img {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 2px solid #f7f7e8;
+  border: 2px solid #c7cfb7;
 }
 
 input {
-  /*display: none;*/
-  /*display: block;*/
+  display: none;
+  position: absolute;
   width: 40px;
   height: 32px;
-  opacity: 1;
+  opacity: 0;
   z-index: 2;
-  position: absolute;
+  border: 2px solid #9dad7f;
 }
 
-.menu {
-  padding-top: 3px;
-}
-
-span {
+div .menu span {
   display: block;
   width: 25px;
   height: 2.5px;
@@ -132,34 +128,33 @@ span {
   position: relative;
   background: #000;
   z-index: 1;
-  -webkit-transform-origin: 3px 0px;
-          transform-origin: 3px 0px;
+  -webkit-transform-origin: 0px 0px;
+          transform-origin: 0px 0px;
 }
 
-span:first-child {
+div .menu span:first-child {
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
 }
 
-span:nth-last-child(2) {
+div .menu span:nth-last-child(2) {
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
 }
 
-input:checked ~ span {
+div .menu input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(-45deg) scale(1.35, 1);
           transform: rotate(-45deg) scale(1.35, 1);
 }
 
-input:checked ~ span:nth-last-child(2) {
+div .menu input:checked ~ span:nth-last-child(2) {
   opacity: 0;
   -webkit-transform: rotate(0) translate();
           transform: rotate(0) translate();
 }
 
 input:checked ~ span:nth-last-child(3) {
-  opacity: 1;
   -webkit-transform: rotate(45deg) scale(1.35, 1) translate(1px, 0px);
           transform: rotate(45deg) scale(1.35, 1) translate(1px, 0px);
 }
@@ -170,8 +165,10 @@ input:checked ~ span {
           transform: rotate(-45deg) scale(1.35, 1);
 }
 
-header nav .menu input[type="checkbox"]:checked ~ ul {
-  height: 240px;
+input:checked ~ ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .right_section {
@@ -225,13 +222,32 @@ header nav .menu input[type="checkbox"]:checked ~ ul {
   border: 5px solid #031e2e;
 }
 
-@media screen and (min-width: 1000px) {
-  /*
-    span {
-        display: default;
-    }
-
-*/
+@media screen and (max-width: 1000px) {
+  nav .nabvar div .menu span {
+    display: block;
+  }
+  nav .nabvar div .menu input {
+    display: block;
+  }
+  .ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border: 2px solid #c7cfb7;
+  }
 }
 
 /*@import './menu';*/
