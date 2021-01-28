@@ -63,6 +63,7 @@ header img {
   border-radius: 28%;
 }
 
+/*Se le agregan ancho a los elemendos de el navegador*/
 .ul li {
   width: 7em;
   border-radius: 10%;
@@ -112,6 +113,7 @@ header img {
   border: 2px solid #c7cfb7;
 }
 
+/*El display del inpud se inhabilita cuando se esta en tamaño grande*/
 div.menu input {
   display: none;
   position: absolute;
@@ -122,6 +124,8 @@ div.menu input {
   border: 2px solid #9dad7f;
 }
 
+/*Aca se define las lineas del Menu ripo hamburguesa
+y su comportamiento al darle click al checkbox*/
 div.menu span {
   display: none;
   width: 25px;
@@ -135,8 +139,8 @@ div.menu span {
 }
 
 span:first-child {
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
 }
 
 span:nth-last-child(2) {
@@ -145,7 +149,6 @@ span:nth-last-child(2) {
 }
 
 input:checked ~ span {
-  /*opacity: 1;*/
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -159,6 +162,7 @@ input:checked ~ span:nth-last-child(3) {
   opacity: 0;
 }
 
+/*Cuando se hace click en el checkbox, se visualiza el Menun*/
 input:checked ~ ul {
   display: -webkit-box;
   display: -ms-flexbox;
