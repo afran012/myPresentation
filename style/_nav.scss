@@ -1,45 +1,99 @@
-/*ul {
-    display:flex; 
-    justify-content: space-around;
-}*/
-    
-li {
-    display: inline-block;
-    width: 5em;
-    border-radius: 50%;
-    padding: 0.5em;
-    margin: 0.5em ;
-    line-height: 1em;
+.ul li{
+    width: 7em;
+    border-radius: 10%;
     border: 2px solid $border-primary;
+    box-sizing: border-box;
+}
+
+.ul li:hover{
+    background: #5a5a5a;
 }
 
 
-
-
 .navigator {
+    display:flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-around;
     box-sizing: border-box;
     width: 98%;
     height: 7em;
     margin: 0.5em;
     padding: 0.5em;
     border-radius: 1em;
-    border: 2px solid $bg-primary;    
-    /*align-items: center; */
+    border: 2px solid $bg-primary;  
 }
 
 .ul{
-    
     align-items: center;
     box-sizing: border-box;
     align-content: space-between;
     display:flex;
     justify-content: space-around;
+    border: 2px solid $bg-secundary;
+
 }
 
-.ul li{
-    display: inline;
-    box-sizing: border-box;
-    align-items: center;
-    margin: 0.3em auto;
-    @extend %circle;
+
+
+input {
+    /*display: none;*/
+    display: block;
+    width: 40px;
+    height: 32px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+}
+
+/*
+div {
+    width: 10%;
+    height: 32px;
+    position: absolute;
+}*/
+
+span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    margin-bottom: 6.5px;
+    /*position: relative;*/
+    background: #000;
+    z-index: 1;
+    transform-origin: 0px 0px;
+}
+
+span:first-child {
+    transform-origin: 0% 0%;
+}
+
+span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+input:checked ~ span {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1.35, 1) ;
+}
+
+input:checked ~ span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0) translate();
+}
+
+input:checked ~ span:nth-last-child(3) {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.35, 1) translate(1px,0px);
+}
+
+
+input:checked ~ span {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1.35, 1) ;
+}
+
+
+input:checked ~ ul {
+    display: none;
 }

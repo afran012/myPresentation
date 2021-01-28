@@ -19,22 +19,8 @@ html {
   outline: none;
 }
 
-.ul li {
-  width: 10%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow: hidden;
-  height: 4em;
-  border: 1.5px solid #224b2c;
-  border-radius: 30%;
-  -webkit-box-shadow: -4px 1px 1px 3px #f7f7e8;
-          box-shadow: -4px 1px 1px 3px #f7f7e8;
-  line-height: 3em;
-  text-align: center;
-}
-
 body {
-  width: 70%;
+  width: 90%;
   padding: 0 20px 20px 20px;
   border: 5px solid #031e2e;
   margin: 2em auto;
@@ -43,13 +29,14 @@ body {
 
 h1 {
   margin: 0;
-  display: inline-block;
+  width: 20%;
   padding: 0.1em 0.1em;
   color: #000000;
   text-shadow: 0.1em 0.1em 0.1em #fae76e;
 }
 
 header {
+  /*Menu hamburguesa*/
   background: #557174;
   /*justify-content: center;*/
   -webkit-box-sizing: border-box;
@@ -57,31 +44,46 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header img {
   width: 20%;
-  display: inline-block;
-  margin: 0.3em auto;
+  margin: 0.5em;
   border: 0.2em solid #031e2e;
-  border-radius: 50%;
+  border-radius: 28%;
 }
 
-/*ul {
-    display:flex; 
-    justify-content: space-around;
-}*/
-li {
-  display: inline-block;
-  width: 5em;
-  border-radius: 50%;
-  padding: 0.5em;
-  margin: 0.5em;
-  line-height: 1em;
+.ul li {
+  width: 7em;
+  border-radius: 10%;
   border: 2px solid #031e2e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ul li:hover {
+  background: #5a5a5a;
 }
 
 .navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 98%;
@@ -90,7 +92,6 @@ li {
   padding: 0.5em;
   border-radius: 1em;
   border: 2px solid #f7f7e8;
-  /*align-items: center; */
 }
 
 .ul {
@@ -106,16 +107,71 @@ li {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  border: 2px solid #f7f7e8;
 }
 
-.ul li {
-  display: inline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0.3em auto;
+input {
+  /*display: none;*/
+  /*display: block;*/
+  width: 40px;
+  height: 32px;
+  opacity: 1;
+  z-index: 2;
+  position: absolute;
+}
+
+.menu {
+  padding-top: 3px;
+}
+
+span {
+  display: block;
+  width: 25px;
+  height: 2.5px;
+  margin-bottom: 6.5px;
+  position: relative;
+  background: #000;
+  z-index: 1;
+  -webkit-transform-origin: 3px 0px;
+          transform-origin: 3px 0px;
+}
+
+span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(-45deg) scale(1.35, 1);
+          transform: rotate(-45deg) scale(1.35, 1);
+}
+
+input:checked ~ span:nth-last-child(2) {
+  opacity: 0;
+  -webkit-transform: rotate(0) translate();
+          transform: rotate(0) translate();
+}
+
+input:checked ~ span:nth-last-child(3) {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) scale(1.35, 1) translate(1px, 0px);
+          transform: rotate(45deg) scale(1.35, 1) translate(1px, 0px);
+}
+
+input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(-45deg) scale(1.35, 1);
+          transform: rotate(-45deg) scale(1.35, 1);
+}
+
+header nav .menu input[type="checkbox"]:checked ~ ul {
+  height: 240px;
 }
 
 .right_section {
@@ -168,4 +224,15 @@ li {
   border-radius: 3px;
   border: 5px solid #031e2e;
 }
+
+@media screen and (min-width: 1000px) {
+  /*
+    span {
+        display: default;
+    }
+
+*/
+}
+
+/*@import './menu';*/
 /*# sourceMappingURL=style.css.map */
